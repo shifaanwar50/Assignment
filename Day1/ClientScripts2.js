@@ -1,0 +1,1 @@
+alert('Hello from Second client (clientScript2.js)');

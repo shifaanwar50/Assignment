@@ -1,0 +1,1 @@
+alert('Hello from first client(clientScript1.js)');
