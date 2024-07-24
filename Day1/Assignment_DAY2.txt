@@ -1,0 +1,38 @@
+Assignment-2
+~~~~~~~~~~~~
+1. Is it possible to disable JavaScript in browser?  If yes, How to disable javascript in browser?
+ans - It can be done in two ways   
+a-using site permission in setting page
+b-using command menu in developer tools.
+
+2. What is the difference between undefined and not defined in JavaScript?
+ans-If the variable name which is being accessed doesn’t exist in memory space then it would be not defined, and if exists 
+    in memory space but hasn’t been assigned any value till now, then it would be undefined.
+
+3. Difference between ==  and ===?
+ans-Double equals (==) will try to convert the values to the same data type and then try to compare them. But triple equals 
+(===) strictly compares the value and the datatype.
+
+4. What does the isNaN() function?
+ans-The JavaScript isNaN() Function is used to check whether a given value is an illegal number or not. It returns true if 
+the value is a NaN else returns false.
+
+5. Difference between Client side JavaScript and Server side JavaScript?
+ans-Client-side JavaScript (CSJS) and Server-side JavaScript (SSJS) serve different purposes in web development. Here’s a breakdown of their key differences:
+*-Client-Side JavaScript (CSJS)
+Execution Location: Runs on the user’s browser.
+Purpose: Enhances and manipulates web pages and user interfaces.
+Common Uses: Form validation, animations, interactive features, and handling user events.
+Access: Cannot directly access databases or server-side resources.
+Visibility: Source code is visible to the user.
+Examples: Scripts that validate form inputs before submission, dynamic content updates without page reloads.
+*- Server-Side JavaScript (SSJS)
+Execution Location: Runs on the web server.
+Purpose: Handles backend operations like database interactions, file system access, and server logic.
+Common Uses: Processing user requests, accessing databases, performing calculations, and generating dynamic content.
+Access: Can access server-side resources and databases.
+Visibility: Source code is not visible to the user.
+Examples: Node.js applications that handle API requests, server-side rendering of web pages.
+
+6. Practical :  Write a JavaScript code to display Employee details as follows in console window: 
+				Empno : 12645,  Ename  :  Scott,  Job : Manager, Salary :  45000
