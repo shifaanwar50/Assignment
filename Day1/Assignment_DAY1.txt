@@ -1,0 +1,55 @@
+Assignment-1
+~~~~~~~~~~~~~
+1. What are the popup boxes in javascript?
+ans- In Javascript, popup boxes are used to display the message or notification to the user.
+There are three types of pop-up boxes in JavaScript:
+Alert Box
+Prompt Box
+Confirm Box
+
+2. What is JavaScript engine for Safari?
+ans - JavaScriptCore 
+
+3.  Test the following requirement using JavaScript
+
+		a.  Create two separate *.js files (Names :  ClientScripts1.js, ClientScripts2.js)
+		b.  Write some messages using alert() .  Message should contains the file name
+		c.   Import the above js files in other *.html document and observe.
+
+ans - index.html
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script src="./ClientScripts2.js"></script>
+      <script src="./ClientScripts1.js"></script>
+      </head>   
+      </body>
+      </html>
+  
+    ClientScripts1.js
+    alert('Hello from first client(clientScript1.js)');
+   
+    ClientScripts2.js
+    alert('Hello from Second client (clientScript2.js)');
+
+observation - The js file which will be included first in the html will be the one whose alert box will be displayed first.Like if we are adding client
+Script1.js before clientScript2.js then this alert box ('Hello from first client(clientScript1.js)') will be displayed first and after that second file 
+alert box.
+
+4.Do some changes and observe	
+		a.  Give some wrong file name while import and observe the messages in console window
+		b.  Is  Filename case sensitive check practically?
+
+ans - a - on giving different file names it's showing following messages
+      *GET http://127.0.0.1:5500/Day-1/clientScri2.js net::ERR_ABORTED 404 (Not Found)
+      *index.html:1 Refused to execute script from 'http://127.0.0.1:5500/Day-1/clientScri2.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.
+      
+      b- In javascript file name are not case sensitive because the language does not manage files directly.
+
+5.  What are the key differences between Java and JavaScript?
+ans - Java is statically typed, which means that data types are determined at compile time. JavaScript is dynamically typed, which means that data types are determined at runtime. 
+		
+		
