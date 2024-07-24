@@ -1,7 +1,0 @@
-Assignment-2
-~~~~~~~~~~~~
-1. Is it possible to disable JavaScript in browser?  If yes, How to disable javascript in browser?
-2. What is the difference between undefined and not defined in JavaScript?
-3. Difference between ==  and ===?
-4. What does the isNaN() function?
-5. Difference between Client side JavaScript and Server side JavaScript?
