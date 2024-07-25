@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset style="border:5px solid purple">
+        <legend>Product Details</legend>
+     Product Name : <input type="text"/><br/><br/>
+     Unit Price : <input type="text" id="up"/><br/><br/>
+     Quantity : <input type="text" id="q"/><br/><br/>
+     <input type="button" id="btn" value="Get Total" onclick="getTotal()"/><br/><br/>
+     <div id="result"></div>
+    </fieldset>
+    <script>
+    function getTotal(){
+    const price = parseFloat(document.getElementById("up").value);
+    const quantity = parseFloat(document.getElementById("q").value);
+    let discount=0;
+    let total=0;
+    if(quantity>30)
+    {
+    let ans = window.confirm("Do you want to proceed?");  
+     if(ans)
+     discount=0.30;   
+    }
+    else if(quantity>20)
+    {
+    let ans = window.confirm("Do you want to proceed?");  
+    if(ans)    
+    discount=0.20;    
+    }
+    else if(quantity>10)
+    {
+    let ans = window.confirm("Do you want to proceed?");  
+    if(ans)   
+    discount=0.10   
+    }
+    let ans = window.confirm("Do you want to proceed?");  
+     if(ans)
+    total = price*quantity*(1-discount);    
+    document.getElementById('result').innerHTML="Total Amount : "+total;
+    } 
+    </script>
+</body>
+</html>

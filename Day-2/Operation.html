@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Mathematical Operation</h3>
+    <hr/>
+    <fieldset>
+        First Number : <input type="text" id="num1"/><br/><br/>
+        Second Number : <input type="text" id="num2"/><br/><br/>
+        <input type="button" value="Add" onclick="add()" />
+        <input type="button" value="Sub"  onclick="sub()"/>
+        <input type="button" value="Multiply" onclick="mul()"/><br/><br/>
+        <div id="p1"></div>
+    </fieldset>
+    <script>
+     function add(){
+      let n1 = parseFloat(document.getElementById('num1').value);
+      let n2 = parseFloat(document.getElementById('num2').value);
+      let result = n1+n2;
+      document.getElementById("p1").innerText="Result : "+ result;
+     }  
+     function sub(){
+      let n1 = parseFloat(document.getElementById('num1').value);
+      let n2 = parseFloat(document.getElementById('num2').value);
+      let result = n1-n2;
+      document.getElementById("p1").innerText="Result : "+ result;
+     }
+     function mul(){
+      let n1 = parseFloat(document.getElementById('num1').value);
+      let n2 = parseFloat(document.getElementById('num2').value);
+      let result = n1*n2;
+      document.getElementById("p1").innerText="Result : "+ result;
+     }
+    </script>
+</body>
+</html>
