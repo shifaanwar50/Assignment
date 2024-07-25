@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Login form</h3>
+   <hr/>
+   <fieldset>
+    <legend>User Login</legend>
+    user name :<input type="text" id="t1"/><br/><br/>
+    password : <input type="password" id="pwd"><br/><br/>
+    <input type="button" onClick="buttonClick()" value="login"/><br/><br/>
+    <p id="p1"></p>
+   </fieldset>
+   <script>
+    function buttonClick(){
+    var name = document.getElementById("t1");
+    var pass = document.getElementById("pwd");
+    var pobj = document.getElementById("p1");
+    if(name.value=="admin"&&pass.value=="123")
+   {
+   document.getElementById('p1').innerHTML="Welcome"; 
+   document.getElementById('p1').style.color='green'; 
+   }
+   else
+   {
+   document.getElementById('p1').innerHTML="Invalid message"; 
+   document.getElementById('p1').style.color='red'; 
+   }
+    }
+   </script>
+</body>
+</html>

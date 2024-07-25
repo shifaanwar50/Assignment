@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Mathematical Operation</h3>
+    <hr/>
+    <fieldset>
+        First Number : <input type="text" id="num1"/><br/><br/>
+        Second Number : <input type="text" id="num2"/><br/><br/>
+        <input type="button" value="Add" onclick="operation(event)" />
+        <input type="button" value="Sub"  onclick="operation(event)"/>
+        <input type="button" value="Mul" onclick="operation(event)"/><br/><br/>
+        <div id="p1"></div>
+    </fieldset>
+    <script>
+     function operation(event)
+     {
+    var n1 = parseFloat(document.getElementById('num1').value);
+    var n2 = parseFloat(document.getElementById('num2').value);   
+    if(event.target.value=="Add")
+     {
+    let result = n1+n2;
+    document.getElementById("p1").innerText="Result : "+ result;
+     }
+     else if(event.target.value=="Sub")
+     {
+    let result = n1-n2;
+    document.getElementById("p1").innerText="Result : "+ result;
+     }
+     else if(event.target.value=="Mul")
+     {
+    let result = n1*n2;
+    document.getElementById("p1").innerText="Result : "+ result;
+     }
+     }
+    </script>
+</body>
+</html>
