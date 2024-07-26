@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <fieldset>
+    <legend>Employee Details</legend>
+    <input type="text" placeholder="Enter empId..." id="t1"/><br/><br/>
+    <input type="text" placeholder="Enter empName..." id="t2"/><br/><br/>
+    <input type="text" placeholder="Enter job..." id="t3"/><br/><br/>
+    <input type="text" placeholder="Enter salary..." id="t4"/><br/><br/>
+    <input type="text" placeholder="Enter deptno..." id="t5"/><br/><br/>
+    <input type="button" value="get details" onClick="createEmployee()"/>
+   </fieldset>
+   <div id="p1"></div>
+   <script>
+   function createEmployee(){
+    var id = document.getElementById("t1").value;
+   var name = document.getElementById("t2").value;
+   var job = document.getElementById("t3").value;
+   var sal = document.getElementById("t4").value;
+   var deptno = document.getElementById("t5").value;
+
+//    var obj = { //object initializer
+//    id:id,
+//    name:name,
+//    job:job,
+//    sal:sal,
+//    deptno:deptno
+//    };
+//    var out = `id : ${obj.id} , name:${obj.name} , job:${obj.job} , sal:${obj.sal} , deptno:${obj.deptno}`;
+//    document.getElementById("p1").innerHTML=out;
+
+   var obj={}; //empty object
+   obj.id=id;
+   obj.name=name;
+   obj.job=job;
+   obj.sal=sal;
+   obj.deptno=deptno;
+   var out1 = `id : ${obj.id} , name : ${obj.name} , job : ${obj.job} , sal : ${obj.sal} , deptno : ${obj.deptno}`;
+   document.getElementById("p1").innerHTML=out1;
+
+//    function employee(id,name,job,sal,deptno){ //using function constructor
+//    this.id=id;
+//    this.name=name;
+//    this.job=job;
+//    this.sal=sal;
+//    this.deptno=deptno; 
+//    }
+//    var emp1 = new employee(id,name,job,sal,deptno);
+//    var out2 = `id : ${emp1.id}, name : ${emp1.name} , job : ${emp1.job} , salary : ${emp1.sal} , departmentNo : ${emp1.deptno}`;
+//    document.getElementById("p1").innerHTML=out2;
+    }
+   </script>
+</body>
+</html>
