@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Employee Details: </h3><br />
+    <input type="text" id="t1" placeholder="Enter empno...." />
+    <input type="text" id="t2" placeholder="Enter ename....">
+    <input type="text" id="t3" placeholder="Enter job....">
+    <input type="text" id="t4" placeholder="Enter salary...">
+    <input type="button" id="btn" value ="insert data" onclick="insertRow()">
+    <br /><br/>
+    <table id="table1" border="2" width="500" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Job</th>
+            <th>Salary</th>
+        </tr>
+    </table>
+    <script>
+        function insertRow() {
+            var id = document.getElementById("t1");
+            var name = document.getElementById("t2");
+            var job = document.getElementById("t3");
+            var sal = document.getElementById("t4");
+            var tObj = document.getElementById("table1");
+            var rObj = tObj.insertRow(-1);
+            var cellObj1 = rObj.insertCell(0);
+            var cellObj2 = rObj.insertCell(1);
+            var cellObj3 = rObj.insertCell(2);
+            var cellObj4 = rObj.insertCell(3);
+            cellObj1.innerHTML = id.value;
+            cellObj2.innerHTML = name.value;
+            cellObj3.innerHTML = job.value;
+            cellObj4.innerHTML = sal.value;
+        }
+    </script>
+</body>
+
+</html>
