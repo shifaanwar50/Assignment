@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    #btn1,
+    #btn2 {
+        background-color: grey;
+        padding: 7px;
+        cursor: pointer;
+    }
+    fieldset
+    {
+    width:50%;    
+    }
+</style>
+
+<body>
+    <h3>Adv.Javascript-ES6(Use Map Collection)</h3>
+    <hr />
+    <fieldset>
+        <legend>Friend's Details</legend>
+        <label>Friend's Name:</label>
+        <input type="text" id="t1"><br /><br />
+        <label>Contact Number:</label>
+        <input type="text" id="t2"><br /><br />
+        <input type="button" id="btn1" value="Add Friend" onclick="btn1_click()" /><br /><br />
+        <input type="text" id="t3" placeholder="Enter the name...."><br /><br />
+        <input type="button" id="btn2" value="Get Contact Number" onclick="btn2_click()" /><br /><br />
+        <p id="p1"></p>
+    </fieldset>
+    <script>
+        const mapObj = new Map();
+        function btn1_click() {
+            var text1 = document.getElementById("t1");
+            var text2 = document.getElementById("t2");
+            if (text1.value && text2.value) {
+                mapObj.set(text1.value,text2.value);
+                console.log(mapObj)
+                alert("Your friend has been added");
+                document.getElementById("t1").value='';
+                document.getElementById("t2").value='';
+                for(let k  of  mapObj.keys()  )
+			{ 
+				 console.log( ` Key : ${k}, Value  :  ${ mapObj.get(k) }`);
+			}
+            }
+            else
+                alert("sorry,you have not added any data");
+        }
+
+
+        function btn2_click(){
+         var text3 = document.getElementById("t3").value;  
+         if(text3)
+         {
+         var num = mapObj.get(text3) ;   
+          if(num)
+          {
+        document.getElementById("p1").innerHTML = `Phone number of ${text3} : ${num}`;
+          }
+          else{
+          alert('no such friend exist');
+          }
+         }
+        
+        else
+        {
+        alert("You have not added this friend");   
+        }
+        
+         }   
+    </script>
+</body>
+
+</html>

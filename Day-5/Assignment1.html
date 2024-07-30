@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #btn1
+    {
+     background-color: grey;
+     color:white;
+     padding:10px;
+     cursor:pointer;
+    }    
+    h3
+    {
+     color:grey;   
+    }
+    </style>
+</head>
+<body>
+    <h3>Bank Details</h3>
+    <input type="button" id="btn1" onclick="getData()" value="show data">
+    <div id="div1"></div>
+    <script>
+    class BankAccount
+    {
+      accNumber="";
+      name="";
+      city="";
+      email="";
+      phoneNo="";
+      constructor(accNumber,name)
+      {
+      this.accNumber=accNumber;
+      this.name=name;  
+      }
+    } 
+    class FDAccount extends BankAccount
+    {
+        fdAmount=0;
+        interestRate=0;
+        duration=0;
+        constructor(accNumber,name,fdAmount,interestRate=8.5,duration=12)
+        {
+         super(accNumber,name);
+         this.fdAmount = fdAmount;
+         this.interestRate=interestRate;
+         this.duration=duration;  
+        }
+    }
+    function getData(){
+      var obj = new FDAccount("234567890","Smith",1000000,12,18);
+      var str = `<br/> Account Number : ${obj.accNumber}<br/> Name : ${obj.name}<br/> FD Amount : ${obj.fdAmount}<br/> InterestRate : ${obj.interestRate}% <br/> Duration : ${obj.duration} Months`;  
+      document.getElementById("div1").innerHTML=str;
+    }   
+    </script>
+</body>
+</html>
