@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2</title>
+    <style>
+     input
+     {
+      padding:10px;
+      background-color: grey;
+      color:white;  
+     }
+    </style>
+</head>
+<body>
+    <input type="button" value="show data" onclick="getData()"/><br/><br/>
+    <table id="t1" border="2">
+     
+    </table>
+
+    <script>
+     var tableObj = document.getElementById("t1"); 
+     function getData()
+     {
+      let url ="https://www.w3schools.com/angular/customers.php";
+      window.fetch(url).then((response)=>
+      {
+      response.json().then((jsonResponse)=>{
+        let  user = jsonResponse.records;
+        console.log(user);
+        displayUser(user);
+      });  
+     });
+    } 
+    function displayUser(userArray)
+    {
+     let str =`<tr><th>Name</th> <th>City</th><th>Country</th></tr>`;
+     for(let item of userArray)
+    {
+        str  +=  `<tr> <td>${item.Name}</td> <td>${item.City}</td> <td>${item.Country}</td></tr>`;
+        tableObj.innerHTML=str; 
+    }  
+    }
+    </script>
+</body>
+</html>

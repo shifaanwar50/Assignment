@@ -1,0 +1,16 @@
+5. Find some details about following: 
+a.How to hide html element using JavaScript?  jQuery? 
+ans - jQuery hide() method is used to hide the selected element. It acts like the display: none property of CSS 
+      and removes the selected element from the document. 
+      In Javascript the visibility property is used to hide or show the content of HTML elements. The visibility
+      property specifies that the element is currently visible on the page. The ‘hidden’ value can be used to hide 
+      the element. This hides the element but does not remove the space taken by the element, unlike the display property.          
+b.  How to select all textboxes using jQuery selector?  
+    Hint : Without using classname / id
+ans - All elements that do not match the given selector can be selected using jQuery( “:not(selector)” ).
+c.  What is the difference between   "this" and  $(this) in jquery programming?
+ans -In JavaScript, this keyword is used to refer to the object it belongs to. The value that this stores is the 
+     current execution context of the JavaScript program.Thus, when used inside a function this value will change 
+     depending on how that function is defined, how it is invoked and the default execution context whereas $(this)
+     refers to the object it belongs to. Basically, both are the same. But when this keyword is used inside $(), 
+     then it becomes a jQuery object, and now we can use all properties of jQuery on this method.
