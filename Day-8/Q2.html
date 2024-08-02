@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list {
+            background-color: bisque;
+            border: 2px solid black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Display CSV Values in List</h2>
+    <hr />
+    <label>Input String:</label>
+    <input type="text" id="t1" />
+    <button id="b1">Get Data</button><br /><br />
+    <ul class="list1">
+
+    </ul>
+    <br /><br />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                let str = $("#t1").val();
+                let result = getCharacter(str);
+                $(".list1").html(result);
+                $(".list1").addClass("list");
+            })
+        });
+        function getCharacter(inputstr) {
+            let output = "";
+            let arr = inputstr.split(',');
+            let str = "";
+            for (let i = 0; i < arr.length; i++) {
+                str += `<br/><li>${arr[i].toUpperCase()}</li><br/>`;
+            }
+            return str;
+        }
+    </script>
+</body>
+
+</html>

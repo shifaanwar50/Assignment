@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 2px solid blue;
+        }
+
+        .c1 {
+            font-weight: bold;
+        }
+
+        .c2 {
+            text-decoration: underline;
+        }
+
+        .c3 {
+            font-style: italic;
+        }
+
+        .btn {
+            background-color: blue;
+            color: white;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Applying style class</h3>
+    <hr>
+    <br />
+    <button id="b1">B</button>
+    <button id="b2">U</button>
+    <button id="b3">I</button>
+    <br /><br />
+    <div class="text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam culpa consequatur voluptatem, sit modi
+        molestiae doloremque tenetur officia neque excepturi nobis! Eius soluta qui dolorem! Sapiente aspernatur est
+        sint saepe.
+        Mollitia labore possimus obcaecati, natus in laboriosam? Dolore voluptates deleniti eius esse nesciunt porro
+        molestias voluptatum itaque qui sit cupiditate, odit obcaecati, repudiandae tenetur ipsa ut nostrum ducimus
+        architecto libero?
+        Molestias voluptate eligendi unde reiciendis quaerat iste assumenda consequuntur velit, a, eum laboriosam
+        dolorum facilis. Praesentium ratione corrupti sunt velit sit optio assumenda vel accusamus, quas odio qui
+        necessitatibus earum.
+        Accusamus quo expedita rerum, consequuntur aut ipsam aperiam eaque ab rem nesciunt cum sapiente reiciendis culpa
+        tempora aliquam dolorum dignissimos minima libero aspernatur dolorem consequatur. Culpa provident id itaque
+        nostrum.
+        Dolor fugit sunt ad vitae natus iusto assumenda inventore minima facilis cum necessitatibus commodi ratione
+        pariatur voluptatem corporis, maiores, animi placeat aspernatur amet! Nulla amet, incidunt distinctio quae
+        labore laboriosam.
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                $("div").addClass("c1");
+                $("#b1").addClass("btn");
+            });
+            $("#b2").click(function () {
+                $("div").addClass("c2");
+                $("#b2").addClass("btn");
+            });
+            $("#b3").click(function () {
+                $("div").addClass("c3");
+                $("#b3").addClass("btn");
+            });
+        });
+    </script>
+</body>
+
+</html>
